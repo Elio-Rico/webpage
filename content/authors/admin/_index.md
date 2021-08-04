@@ -1,27 +1,28 @@
 ---
-bio: My research interests include distributed robotics, mobile computing and programmable
-  matter.
+bio: My research interests include international macroeconomics, monetary policy and financial stability.
 education:
   courses:
-  - course: PhD in Artificial Intelligence
-    institution: Stanford University
-    year: 2012
-  - course: MEng in Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    year: 2009
-  - course: BSc in Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    year: 2008
-email: ""
+  - course: PhD Student in Economics
+    institution: University of Lausanne
+    year: 2018-2023
+  - course: Master of Science in Economics
+    institution: University of Lausanne
+    year: 2016-2018
+  - course: Bachelor of Science in Economics
+    institution: University of Bern
+    year: 2012-2015
+email: elio.bolliger@unil.ch
 highlight_name: false
 interests:
-- Artificial Intelligence
-- Computational Linguistics
-- Information Retrieval
+- International Macroeconomics
+- Monetary Policy
+- Financial Stability
 organizations:
-- name: Stanford University
-  url: https://www.stanford.edu/
-role: Professor of Artificial Intelligence
+- name: University of Lausanne
+  url: https://www.unil.ch/hec/en/home.html/
+- name: CREA Swiss Institute of Applied Economics
+  url: https://www.unil.ch/crea/fr/home.html
+role: PhD Student in Economics
 social:
 - icon: envelope
   icon_pack: fas
@@ -31,22 +32,19 @@ social:
   icon: twitter
   icon_pack: fab
   label: Follow me on Twitter
-  link: https://twitter.com/GeorgeCushen
-- icon: graduation-cap
-  icon_pack: fas
-  link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ
+  link: https://twitter.com/BolligerElio
 - icon: github
   icon_pack: fab
-  link: https://github.com/gcushen
+  link: https://github.com/Elio-Rico
 - icon: linkedin
   icon_pack: fab
-  link: https://www.linkedin.com/
+  link: https://www.linkedin.com/in/elio-bolliger/
 superuser: true
-title: Nelson Bighetti
+title: Elio Bolliger
 ---
 
-Nelson Bighetti is a professor of artificial intelligence at the Stanford AI Lab. His research interests include distributed robotics, mobile computing and programmable matter. He leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
+I am PhD Student in Economics at the [University of Lausanne](https://www.unil.ch/hec/en/home.html/). I am particularly interested in research related to information frictions, expectation formations and macroprudential regulation.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.
+Besides that, I am a scientific collaborator at the [CREA Swiss Institute of Applied Economics](https://www.unil.ch/crea/fr/home.html). Projects include forecasting exports of specific industries and the development of a News Sentiment Index with a novel database in Switzerland.
 
-{{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/demo_resume.pdf" "newtab" >}}resumé{{< /staticref >}}.
+{{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/demo_resume.pdf" "newtab" >}}CV {{< /staticref >}}.
