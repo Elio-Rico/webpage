@@ -6,22 +6,19 @@
 main:
   - name: About
     url: '#about'
-    weight: 20
+    weight: 1
   - name: News
-    url: '#posts'
-    weight: 60
+    url: '#news'
+    weight: 2
   - name: Research
-    url: '#featured'
-    weight: 80
+    url: '#research'
+    weight: 3
   - name: Projects
     url: '#projects'
-    weight: 100
+    weight: 4
   - name: CV
-    url: '#talks'
-    weight: 120
-  # - name: Courses
-  #   url: courses/
-  #   weight: 60
+    url: '#cv'
+    weight: 5
   - name: Contact
     url: '#contact'
-    weight: 80
+    weight: 6
