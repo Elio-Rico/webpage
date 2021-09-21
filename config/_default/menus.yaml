@@ -17,7 +17,7 @@ main:
     url: '#projects'
     weight: 4
   - name: CV
-    url: '#cv'
+    url: 'https://elio-rico.github.io/CV_ElioBolliger.pdf'
     weight: 5
   - name: Contact
     url: '#contact'

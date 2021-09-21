@@ -52,4 +52,4 @@ Before starting my PhD, I was an intern at the Financial Stability Division of t
 This homepage is a showcase of my research and other personal projects. I hope you enjoy it.
 
 
-{{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/demo_resume.pdf" "newtab" >}}CV {{< /staticref >}}.
+{{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/CV_ElioBolliger.pdf" "newtab" >}}CV {{< /staticref >}}.
