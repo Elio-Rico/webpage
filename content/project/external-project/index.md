@@ -1,6 +1,6 @@
 ---
 date: "2016-04-27T00:00:00Z"
-external_link: http://example.org
+external_link: https://elio-rico.github.io/textAnalysis_RMarkdown.html
 image:
   caption: Photo by Toa Heftiba on Unsplash
   focal_point: Smart
