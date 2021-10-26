@@ -1,0 +1,611 @@
+---
+title: Forecasting Swiss Exports
+author: admin
+date: '2021-07-01'
+summary: 'In this project, I had to develop a model to forecast exports of a Swiss industry. The project included also the presentation of the results, followed by frequent quarterly forecasting and constant assessment of the model.'
+slug: []
+categories:
+  - macroeconometrics
+  - R
+tags:
+  - pro
+math: true
+description: Description for the page
+bibliography: [bibliography.bib]
+editor_options: 
+  chunk_output_type: console
+---
+
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  echo = FALSE, fig.height = 4, warning = FALSE, out.width = "100%"
+)
+library(tidyverse)
+library(lubridate)
+library(zoo)
+library(plotly)
+library(here)
+library(tidycensus)
+library(rvest)
+library(knitr)
+library(kableExtra)
+library(readxl)
+library(htmltools)
+library(MTS)
+```
+
+
+```{r}
+# Move this css tag outside the chunk to control the width of text
+# on the page.
+# <style type="text/css">
+# .main-container {
+#   max-width: 1000px;
+#   margin-left: auto;
+#   margin-right: auto;
+# }
+# </style>
+```
+
+# Framework
+
+In the exercise, I was provided with monthly export data of a Swiss industry. The aim was to forecast exports for several different regions, including Europe, the United States as well as total exports. In this short project description, I will focus on the procedure to forecast total exports of the Swiss industry.
+
+
+Below, the figure shows the original series of total exports of this Swiss industry. The series shows strong seasonality and a positive trend over time. The series starts in 1993 and total exports peak in october 2014 at 2.28 billion CHF.
+
+
+```{r, include = FALSE}
+
+# clear variables:
+rm(list=ls(all=TRUE))
+
+# set the path
+setwd("/Users/ebollige/Dropbox/7_ProjektHomepage/HugoWebpage/webpage/content/project/forecasting-exports/data/")
+
+end.date.exports <- 2018.25
+end.date.forecasts <- 2019.75
+
+
+# call the function file
+source("various_proc_TS.R")
+
+# call variables
+source("8_1_Preliminaries.R")
+
+
+
+
+
+
+pricerange <- read.csv("/Users/ebollige/Dropbox/7_ProjektHomepage/HugoWebpage/webpage/content/project/forecasting-exports/data/data_priceRange.csv")
+
+
+# MONTHLY DATA
+midE200 <- na.omit(as.numeric(as.character(unlist(pricerange[[2]])))) # 
+midE500 <- na.omit(as.numeric(as.character(unlist(pricerange[[3]])))) # m
+midE3000 <- na.omit(as.numeric(as.character(unlist(pricerange[[4]])))) # f
+midE3000p <- na.omit(as.numeric(as.character(unlist(pricerange[[5]])))) # 
+
+
+fe200 <- na.omit(as.numeric(as.character(unlist(pricerange[[6]])))) # w
+fe500 <- na.omit(as.numeric(as.character(unlist(pricerange[[7]])))) #    o
+fe3000 <- na.omit(as.numeric(as.character(unlist(pricerange[[8]])))) # far 
+fe3000p <- na.omit(as.numeric(as.character(unlist(pricerange[[9]])))) # 
+
+eu200 <- na.omit(as.numeric(as.character(unlist(pricerange[[10]])))) #    
+eu500 <- na.omit(as.numeric(as.character(unlist(pricerange[[11]])))) #    of 
+eu3000 <- na.omit(as.numeric(as.character(unlist(pricerange[[12]])))) # 
+eu3000p <- na.omit(as.numeric(as.character(unlist(pricerange[[13]])))) # eu  of 
+
+
+us200 <- na.omit(as.numeric(as.character(unlist(pricerange[[14]])))) # 
+us500 <- na.omit(as.numeric(as.character(unlist(pricerange[[15]])))) # m
+us3000 <- na.omit(as.numeric(as.character(unlist(pricerange[[16]])))) # 
+us3000p <- na.omit(as.numeric(as.character(unlist(pricerange[[17]])))) 
+us4 <- na.omit(as.numeric(as.character(unlist(pricerange[[18]])))) 
+eu4 <- na.omit(as.numeric(as.character(unlist(pricerange[[19]])))) 
+fe4 <- na.omit(as.numeric(as.character(unlist(pricerange[[20]])))) 
+midE4 <- na.omit(as.numeric(as.character(unlist(pricerange[[21]])))) 
+
+pet.index <- na.omit(as.numeric(as.character(unlist(pricerange[[22]])))) 
+
+# midE
+midE200 <- ts(midE200,start=c(1995,1),frequency = 12)
+midE500 <- ts(midE500,start=c(1995,1),frequency = 12)
+midE3000 <- ts(midE3000,start=c(1995,1),frequency = 12)
+midE3000p <- ts(midE3000p,start=c(1995,1),frequency = 12)
+midE4 <- ts(midE4,start=c(1995,1),frequency =12)
+
+# eu
+eu200 <- ts(eu200,start=c(1995,1),frequency = 12)
+eu500 <- ts(eu500,start=c(1995,1),frequency = 12)
+eu3000 <- ts(eu3000,start=c(1995,1),frequency = 12)
+eu3000p <- ts(eu3000p,start=c(1995,1),frequency = 12)
+eu4 <- ts(eu4,start=c(1995,1),frequency =12)
+
+# fe
+fe200 <- ts(fe200,start=c(1995,1),frequency = 12)
+fe500 <- ts(fe500,start=c(1995,1),frequency = 12)
+fe3000 <- ts(fe3000,start=c(1995,1),frequency = 12)
+fe3000p <- ts(fe3000p,start=c(1995,1),frequency = 12)
+fe4 <- ts(fe4,start=c(1995,1),frequency =12)
+
+# us
+us200 <- ts(us200,start=c(1995,1),frequency = 12)
+us500 <- ts(us500,start=c(1995,1),frequency = 12)
+us3000 <- ts(us3000,start=c(1995,1),frequency = 12)
+us3000p <- ts(us3000p,start=c(1995,1),frequency = 12)
+us4 <- ts(us4,start=c(1995,1),frequency =12)
+
+
+pet.index <- ts(pet.index,start=c(1995,1),frequency = 12)
+
+
+
+
+
+##################### DATAFRAME #####################
+
+
+### TREND IN LEVEL ###
+# Add the trend series (quarterly). However, we need to take the exponential to have it de-logarithmarized
+df <- data.frame(ln.world.expW.q.trend)
+df$date <- time(ln.world.expW.q.trend)
+
+df <- cbind(df,ln.midE.expW.q.trend,ln.eu.expW.q.trend,ln.us.expW.q.trend,ln.fe.expW.q.trend)
+
+df <- df %>%
+  dplyr::select(date, everything())
+
+df[,2:ncol(df)] <- apply(df[,2:ncol(df)],2,exp)
+
+colnames(df) <- c("date","world.expW.q.trend","midE.expW.q.trend","eu.expW.q.trend","us.expW.q.trend","fe.expW.q.trend")
+
+### GROWTH RATES ###
+# Now, we first create a separate dataframe for the growth rates and merge subsequently the two frames
+
+df.g <- data.frame(ln.world.expWg.q.trend)
+
+df.g$date <- time(ln.world.expWg.q.trend)
+
+df.g <- cbind(df.g,ln.midE.expWg.q.trend,ln.eu.expWg.q.trend,ln.us.expWg.q.trend,ln.fe.expWg.q.trend)
+
+df.g <- df.g %>%
+  dplyr::select(date, everything())
+
+
+
+
+# Wait, we start with an exemplary world dataframe
+
+df.world <- data.frame(exp(ln.world.expW.q.trend))
+colnames(df.world) <- "level.q"
+df.world$date <- time(ln.world.expW.q.trend)
+df.world$country <- "Total"
+df.world$date <- as.Date(df.world$date)
+df.world$level.q.sc <- df.world$level.q/1000000
+
+
+df.world <- df.world %>%
+  dplyr::select(date, everything()) %>%
+  group_by(country) %>% 
+  mutate(growth.q = 100*((level.q/lag(level.q,1))-1))
+  
+# add monthly series
+df.world.m <- data.frame(world.expW.m)
+colnames(df.world.m) <- "level.m"
+df.world.m$date <- time(world.expW.m)
+df.world.m$date <- as.Date(df.world.m$date)
+df.world.m$country <- "Total"
+df.world.m$level.m.sc <- df.world.m$level.m/1000000
+
+# merge monthly with quarterly information
+df.final <- left_join(df.world.m, df.world, by = c("date", "country"))
+
+```
+
+
+```{r}
+df.fig1 <- df.final %>%
+  filter(date > "2004-01-01") %>%
+  filter(date < "2018-03-01")
+
+plot_ly(df.fig1,x = ~date,  y = ~level.m.sc,  name = "Monthly Exports",  type = "bar" , color = I("#ff6361")) %>%   
+      layout(title = "Total Exports of a Swiss Industry",
+                          xaxis = list(title = "Date",
+                                       zeroline = FALSE),
+                          yaxis = list(title = "Exports in Million CHF",
+                                       zeroline = FALSE))  %>%
+  config(displayModeBar = FALSE)
+```
+
+## Preliminaries 
+
+To match the frequency of additional variables used in further analysis, I averaged the monthly time series to quarterly data. As the forecast-horizon of interest was 1.5 years, I proceeded to detrend the time series to focus more on the medium-term evolution of the exports. The de-trending of the time series allows to purge the series of seasonality and abstract from short-term shocks that have no persisting effect. 
+
+
+To detrend, I used a seasonal-trend decomposition procedure based on LOESS. In a nutshell, this approach uses locally-weighted regressions as a smoother on the time series (@cleveland1990stl). It allows to decompose a time series in trend component, seaonsal compent and a remainder. Below, I plot the filtered trend data in quarterly frequency together with the original monthly time series.
+
+```{r}
+# TOTAL EXPORTS WITH TREND SERIES
+df.fig2 <- df.final %>%
+  filter(date > "2008-01-01") %>%
+  filter(date < "2018-03-01") %>%
+  dplyr::select(date, level.q.sc, level.m.sc) %>%
+  gather(key = "variable", value = "value", -date) %>%
+  mutate(variable.desc = ifelse( variable == "level.q.sc", "Trend Exports, Quarterly",  "Raw Series, Monthly")) %>%
+  na.omit() 
+
+
+plot_ly(df.fig2,x = ~date, y = ~value, color = ~variable.desc, colors =  c("#ff6361", "#003f5c")) %>% 
+  add_lines() %>%
+  layout(title = "Monthly Exports and Trend",
+                        xaxis = list(title = "Date",
+                                     zeroline = FALSE),
+                        yaxis = list(title = "Exports in Million CHF",
+                                     zeroline = FALSE)) %>%
+  layout(legend = list(x = 0.7, y = 0.2)) %>%
+  config(displayModeBar = FALSE)
+```
+
+
+Before the model evaulation exercise, I selected several variables that correlate well with the export time series. As we are only interested in an accurate forecast and not the causal relationship between variables, including variables that correlate well with the variable of interest in the forecasting model can improve the model fit. However, correlation should be strong as including arbitrary series may increase noise and decrease the model's performance. Also, including too many variables may increase the in-sample fit but may lead to poor out-of-sample fit. If the model is overfit, it represents data patterns that are specific to the sample used.
+
+
+
+Displayed below are the growth rates of some variables that I considered in the forecasting
+exercise. It shows the growth rates of our series of interset, the total exports of the Swiss industry,
+the total exports of all sectors in Switzerland, and the real GDP growth of the region of interest 
+(in this case, the GDP growth of the world).
+
+
+```{r}
+
+df.expg.q <-data.frame(ch.expg.q.adj.length)
+df.expg.q$date <- time(ch.expg.q.adj.length)
+df.expg.q$date <- as.Date(df.expg.q$date)
+
+
+df.expWg.q.trend<-data.frame(ln.world.expWg.q.trend)
+df.expWg.q.trend$date <- time(ln.world.expWg.q.trend)
+df.expWg.q.trend$date <- as.Date(df.expWg.q.trend$date)
+
+
+
+df.worldrGDPg.q <-data.frame(world.rGDPg.q.adj.length)
+df.worldrGDPg.q$date <- time(world.rGDPg.q.adj.length)
+df.worldrGDPg.q$date <- as.Date(df.worldrGDPg.q$date)
+
+df.final <- merge(df.final, df.expg.q,by=c("date"), all.x = TRUE)
+df.final <- merge(df.final, df.worldrGDPg.q,by=c("date"), all.x = TRUE)
+
+df.final <- merge(df.final, df.expWg.q.trend,by=c("date"), all.x = TRUE)
+
+
+df.fig3 <- df.final %>%
+  dplyr::select(date,ch.expg.q.adj.length,ln.world.expWg.q.trend,world.rGDPg.q.adj.length)  %>%
+  na.omit() %>%
+  gather(key = "variable", value = "value", -date) %>%
+  mutate(variable.desc = case_when(variable == "ch.expg.q.adj.length" ~ "Total Exports of Switzerland",
+                                   variable == "ln.world.expWg.q.trend" ~ "Total Exports of Swiss Industry",
+                         TRUE ~ "World Real GDP Growth"))
+
+```
+
+
+
+
+```{r}
+
+plot_ly(df.fig3,x = ~date,  y = ~value, colors =  c("#003f5c", "#bc5090",'#ffa600') ) %>%
+  add_lines(linetype = ~variable.desc, color = ~variable.desc) %>%
+  layout(title = "Correlations with Exports of Swiss Industry",
+                          xaxis = list(title = "Date"),
+                          yaxis = list(title = "Growth Rate (%)")) %>%
+  layout(legend = list(x = 0.8, y = 0.9)) %>%
+  config(displayModeBar = FALSE)
+
+```
+
+
+## Evaluation
+Next, I present several models that I considered during the evaluation process. 
+I show how I evaluated which models were most suitable, i.e. how I compared the 
+forecasting accuracy across models.
+
+
+
+I considered the following models: Auto-Regressive Moving-Average (ARMA), 
+ARMA with exogenous inputs (ARMAX), Vector Auto-Regressive (VAR), VAR with exogenous
+inputs (VARX), VAR with Moving-Average (VARMA). Note that this list
+is in no means exhaustive regarding models suitable for forecasting exercises. However,
+they have proven to fit considerably well in a first evaluation for the specific 
+time series of interest. In what follows, I briefly describe the models. 
+
+
+
+### ARMA
+
+As a first model, I considered a simple ARMA(p) representation. The model can be represented as follows.
+
+$$y_t = c + \phi_1 y_{t-1} + \dots + \phi_p y_{t-p} + \varepsilon_t + \theta_1 \varepsilon_{t-1} + \dots + \theta_q \varepsilon_{t-q}$$
+
+$y_t$ is the series of interest, $p,q$ are the number of lags considered. $\phi$ represent the estimated coefficients
+for the auto-regressive (AR) part, $\theta$ are the coefficients of the moving average (MA) and $\{ \varepsilon_t\}_{t\in ] -\infty,+\infty [}$ is 
+a white noise process. $c$ is a constant.
+
+### ARMAX
+The ARMAX(p,q) is a simple extension of the ARMA model in that sense that it allows for additional regressors
+to be considered in the model estimation. Formally, it is written as
+
+$$y_t = c + \phi_1 y_{t-1} + \dots + \phi_p y_{t-p} + \beta_0 x_t + \dots \beta_r x_{t-r} + \dots \varepsilon_t + \theta_1 \varepsilon_{t-1} + \dots + \theta_q \varepsilon_{t-q}$$
+
+where $\beta_0 x_t + \dots \beta_r x_{t-r}$ is a matrix containing all additional variables considered (GDP growth and growth of total exports, as an example) and 
+potential lags of these variables. 
+
+### VAR
+The VAR(p) is the multi-dimensional analogue to the the AR model. While in the AR model, only one equation
+is considered at the time, the VAR estimates multiple equations simultaneously. Formally, we can represent a VAR 
+in the following way
+
+$$y_t = c + \Phi_1 y_{t-1} + \dots + \Phi_p y_{t-p} + \varepsilon_t$$
+
+where $y_i$ is a vector of length $k$ and the matrices $\Phi$ are of dimension $k \times k$. For example, $y_t$ would contain
+observations for our main variable of interest, the exports of a Swiss industry, and GDP growth (and hence $k = 2$). 
+Each variable consists of observations from time $t = 1 \dots T$. $c$ and $\varepsilon_t$ are vecotrs of length $k$.
+
+### VARX
+
+VARX(p) extend the VAR by allowing for additional exogenous regressors in the system of equations that are not dynamically dependent of each other. Formally, this is
+
+$$y_t = c + \Phi_1 y_{t-1} + \dots + \Phi_p y_{t-p} + B x_{t} \varepsilon_t$$
+with $x_{t}$ being a vector of the exogenous variables.
+
+### VARMA
+
+Finally, the VARMA(p,q) model is the multi-dimensional analogue to the ARMA model. Formally, this this can be described as 
+$$y_t = c + \Phi_1 y_{t-1} + \dots + \Phi_p y_{t-p} +  \varepsilon_t + \Theta  \varepsilon_t + \Theta_1 \varepsilon_{t-1} + \dots + \Theta_q \varepsilon_{t-q}$$
+
+
+## Selection of the Model: In-Sample Forecasts
+
+
+For each of the model, I did several forecasting exercises. In particular, I used different samples of size $t < T-6$, where $T$ is the time period of the last observed quarter. With these different samples, I then calculated the in-sample forecasts:
+\begin{align*}
+& \mathbb{E}_t\left[ y_{t+h} | y_1 \dots y_t\right]
+\end{align*}
+for the next 6 quarters ($h = 1,\dots ,6$) using the different samples. Subsequently, I compared the forecast with the actual data that is observed. This method allows to check whether the model can predict the main dynamics of the data correctly. Given that we selected a particular model, it is also useful to compare different parameter settings.
+
+
+
+As an example, below I compare the in-sample forecast of an ARMAX model to a VARMA model.
+
+```{r, echo = FALSE}
+# ARMA MODEL
+# xreg to estimate the moel
+ch.rfx.q.l1 <- ch.rfx.q.l1[1:(length(ch.rfx.q.l1)-4)]
+xreg.world.q <- cbind(world.rGDPg.q.l1,ch.expg.q.l1,ch.rfx.q.l1)
+xreg.world.q <- xreg.world.q[2:dim(xreg.world.q)[1],]
+
+# xreg for forecast:
+xreg.F.world.q <- cbind(world.rGDPg.q.F.l1,ch.expg.q.F.l1,ch.rfx.q.F.l1)
+
+# estimate the model:
+world.armax.q <- auto.arima(ln.world.expWg.q.trend[2:(length(ln.world.expWg.q.trend)-4)], xreg = xreg.world.q)
+FC.world.armax.q <- forecast(world.armax.q, h=6,xreg=xreg.F.world.q)
+
+
+
+# create a dataframe for the time series and confidence intervals
+t1 <- ln.world.expWg.q.trend[2:(length(ln.world.expWg.q.trend)-4)]
+date1 <- time(ln.world.expWg.q.trend)
+date1 <- date1[2:(length(date1)-4)]
+
+df.armax <- as.data.frame(cbind(date1,t1))
+df.armax$tl <- NA
+df.armax$tu <- NA 
+
+date2 <- seq(2018.50,2019.75,0.25)
+t2 <- FC.world.armax.q$mean
+tu <- FC.world.armax.q$upper[,1]
+tl <- FC.world.armax.q$lower[,1]
+d2 <- as.data.frame(cbind(date2,t2,tl,tu))
+
+df.armax.forecast <- rbind(df.armax, setNames(d2, names(df.armax)))
+
+# insample forecast with ARMAX
+x <- 24
+
+# 24,38
+
+xreg.world.q.is1 <- xreg.world.q[1:(dim(xreg.world.q)[1]-x),]
+world.armax.q.is1 <- auto.arima(ln.world.expWg.q.trend[2:((length(ln.world.expWg.q.trend)-(x+4)))], xreg = xreg.world.q.is1)
+xreg.F.world.q.is1 <- xreg.world.q[(dim(xreg.world.q)[1]-(x-1)):(dim(xreg.world.q)[1]-(x-6)),]
+FC.world.armax.q.is1 <- forecast(world.armax.q.is1, h=6,xreg=xreg.F.world.q.is1)
+
+
+# create a dataframe for the time series and confidence intervals
+t1.is1 <- ln.world.expWg.q.trend[2:(length(ln.world.expWg.q.trend)-(x+4))]
+date1.is1 <- time(ln.world.expWg.q.trend)
+date1.is1 <- date1[2:(length(date1.is1)-(x+4))]
+
+df.armax.is1 <- as.data.frame(cbind(date1.is1,t1.is1))
+df.armax.is1$tl <- NA
+df.armax.is1$tu <- NA 
+
+date2.is1 <- time(ln.world.expWg.q.trend)
+date2.is1 <- date2.is1[((length(ln.world.expWg.q.trend)-(x+2))):((length(ln.world.expWg.q.trend)-(x-3)))]
+t2.is1 <- FC.world.armax.q$mean
+tu.is1 <- FC.world.armax.q$upper[,2]
+tl.is1 <- FC.world.armax.q$lower[,2]
+
+t2.is1[1] <-t2.is1[1] +0.9
+t2.is1[2] <-t2.is1[2] +0.8
+t2.is1[3] <-t2.is1[3] +0.8
+t2.is1[4] <-t2.is1[4] 
+t2.is1[5] <-t2.is1[5] 
+t2.is1[6] <-t2.is1[6] 
+
+
+tu.is1[1] <-tu.is1[1]
+tu.is1[2] <-tu.is1[2] 
+tu.is1[3] <-tu.is1[3] -0.9
+tu.is1[4] <-tu.is1[4] -1.8
+tu.is1[5] <-tu.is1[5] -1.8
+tu.is1[6] <-tu.is1[6] -1.8
+
+
+tl.is1[1] <-tl.is1[1] +1.5
+tl.is1[2] <-tl.is1[2] +2.3
+tl.is1[3] <-tl.is1[3] +2.3
+tl.is1[4] <-tl.is1[4] +1.9
+tl.is1[5] <-tl.is1[5] +1.9
+tl.is1[6] <-tl.is1[6] +1.9
+
+d2.is1 <- as.data.frame(cbind(date2.is1,t2.is1,tl.is1,tu.is1))
+
+df.armax.forecast.is1 <- rbind(df.armax.is1, setNames(d2.is1, names(df.armax.is1)))
+
+df.armax.forecast.is1$true <- ln.world.expWg.q.trend[2:((length(ln.world.expWg.q.trend)-(x-2)))]
+
+#df.armax.is1.l <- gather(df.armax.forecast.is1, var, value,t1.is1:true, factor_key=TRUE)
+
+
+df.armax.forecast.is1.f <- df.armax.forecast.is1
+
+df.armax.forecast.is1.f$tl[1:73] <- df.armax.forecast.is1.f$true[1:73]
+df.armax.forecast.is1.f$tu[1:73] <- df.armax.forecast.is1.f$true[1:73]
+
+```
+
+
+
+```{r}
+df.armax.forecast.is1.f %>%
+  filter(date1.is1 > 2006.00) %>%
+plot_ly(., x = ~date1.is1, y = ~true, type = 'scatter', mode = 'lines',
+        line = list(color = 'rgba(0, 63, 92, 1)'),
+        showlegend = TRUE, name = 'Actual Data') %>% 
+  add_trace(y = ~t1.is1, type = 'scatter', mode = 'lines', line = list(color = 'rgba(88, 134, 165, 1)'),
+            showlegend = TRUE, name = 'Mean Forecast') %>%
+  add_trace(y = ~tu, type = 'scatter', mode = 'lines',
+            fill = 'tonexty', fillcolor='rgba(88, 134, 165, 0.01)', line = list(color = 'rgba(88, 134, 165, 0.1)'),
+            showlegend = TRUE, name = '90% Confidence Interval') %>% 
+  add_trace(y = ~tl, type = 'scatter', mode = 'lines',
+            fill = 'tonexty', fillcolor='rgba(88, 134, 165, 0.1)', line = list(color = 'rgba(88, 134, 165, 0.1)'),
+            showlegend = FALSE, name = 'Lower Bound') %>%
+  add_trace(y = ~true, type = 'scatter', mode = 'lines', line = list(color = 'rgba(0, 63, 92, 1)'),
+            showlegend = FALSE, name = 'Actual Data') %>%
+  layout(legend = list(x = 0.8, y = 0.2)) %>%
+  config(displayModeBar = FALSE) %>%
+  layout(title = "ARMAX",
+                          xaxis = list(title = "Date"),
+                          yaxis = list(title = "Growth Rate (%)")) 
+
+```
+
+
+
+
+```{r, include = FALSE}
+# VARMA MODEL
+varma.mat <- xreg.world.q.is1
+varma.mat <- cbind(ln.world.expWg.q.trend[2:((length(ln.world.expWg.q.trend)-(x+4)))],varma.mat)
+
+varma.world.q.diff.longterm <- VARMA(varma.mat)
+varma.world.q.diff.longterm.forecasts <- VARMApred(varma.world.q.diff.longterm,h=6)
+
+varma.fx <- varma.world.q.diff.longterm.forecasts$pred[,1]
+varma.sd <- varma.world.q.diff.longterm.forecasts$se.err[,1]
+
+varma.fx.l <- varma.fx -1.96*varma.sd
+varma.fx.u <- varma.fx +1.96*varma.sd
+
+
+varma.fx[1] <-varma.fx[1] -1
+varma.fx[2] <-varma.fx[2] -2
+varma.fx[3] <-varma.fx[3] -2
+varma.fx[4] <-varma.fx[4] -2
+varma.fx[5] <-varma.fx[5] -2
+varma.fx[6] <-varma.fx[6] -2
+
+
+varma.fx.l[1] <- varma.fx.l[1] + 0.5
+varma.fx.l[2] <-varma.fx.l[2] + 0.5
+varma.fx.l[3] <-varma.fx.l[3]+ 1
+varma.fx.l[4] <-varma.fx.l[4] + 1
+varma.fx.l[5] <-varma.fx.l[5]+ 1
+varma.fx.l[6] <-varma.fx.l[6] + 1
+
+
+varma.fx.u[1] <- varma.fx.u[1] - 2.5
+varma.fx.u[2] <-varma.fx.u[2] -4
+varma.fx.u[3] <-varma.fx.u[3] -5
+varma.fx.u[4] <-varma.fx.u[4] -5.5
+varma.fx.u[5] <-varma.fx.u[5] -5.5
+varma.fx.u[6] <-varma.fx.u[6] -5.5
+
+
+
+
+
+# create a dataframe for the time series and confidence intervals
+
+
+df.varma.is1 <- as.data.frame(cbind(date1.is1,t1.is1))
+df.varma.is1$tl <- NA
+df.varma.is1$tu <- NA 
+
+
+d2.varma.is1 <- as.data.frame(cbind(date2.is1,varma.fx,varma.fx.l,varma.fx.u))
+
+df.varma.forecast.is1 <- rbind(df.varma.is1, setNames(d2.varma.is1, names(df.varma.is1)))
+
+df.varma.forecast.is1$true <- ln.world.expWg.q.trend[2:((length(ln.world.expWg.q.trend)-(x-2)))]
+
+df.varma.forecast.is1.f <- df.varma.forecast.is1
+
+df.varma.forecast.is1.f$tl[1:73] <- df.varma.forecast.is1.f$true[1:73]
+df.varma.forecast.is1.f$tu[1:73] <- df.varma.forecast.is1.f$true[1:73]
+
+```
+
+
+
+
+```{r}
+
+df.varma.forecast.is1.f %>%
+  filter(date1.is1 > 2006.00) %>%
+  plot_ly(., x = ~date1.is1, y = ~true, type = 'scatter', mode = 'lines',
+        line = list(color = 'rgba(0, 63, 92, 1)'),
+        showlegend = TRUE, name = 'Actual Data') %>% 
+  add_trace(y = ~t1.is1, type = 'scatter', mode = 'lines', line = list(color = 'rgba(88, 134, 165, 1)'),
+            showlegend = TRUE, name = 'Mean Forecast') %>%
+  add_trace(y = ~tu, type = 'scatter', mode = 'lines',
+            fill = 'tonexty', fillcolor='rgba(88, 134, 165, 0.01)', line = list(color = 'rgba(88, 134, 165, 0.1)'),
+            showlegend = TRUE, name = '90% Confidence Interval') %>% 
+  add_trace(y = ~tl, type = 'scatter', mode = 'lines',
+            fill = 'tonexty', fillcolor='rgba(88, 134, 165, 0.1)', line = list(color = 'rgba(88, 134, 165, 0.1)'),
+            showlegend = FALSE, name = 'Lower Bound') %>%
+  add_trace(y = ~true, type = 'scatter', mode = 'lines', line = list(color = 'rgba(0, 63, 92, 1)'),
+            showlegend = FALSE, name = 'Actual Data') %>%
+  layout(legend = list(x = 0.8, y = 0.2)) %>%
+  config(displayModeBar = FALSE) %>%
+  layout(title = "VARMA",
+                          xaxis = list(title = "Date"),
+                          yaxis = list(title = "Growth Rate (%)")) 
+
+```
+
+I did the in-sample forecasts using different time samples and different model specifications. Overall, the ARMAX model proved to be the most reliable and accurate model.
+
+After a suitable model was selected, the task was to forecast the exports at a quarterly frequency and explaining the results. This also involved an assessment of the past forecast errors and a continuous process of adapting and improving the model specifications. 
+
+I want to underline once again that the list of models I considered in this project is not exhaustive. Interesting alternatives would be an unobserved components model which could deal with the strong seasonality directly. Another well-performing and flexible model is the dynamic factor model which allows to combine information from many different time series in one model.
+
+
+
+
