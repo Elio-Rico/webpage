@@ -1,0 +1,75 @@
+---
+title: Local Level Model
+author: admin
+date: '2021-07-01'
+summary: 'In this short project, we present some exercices regarding the Local Level Model. We apply the Kalman filter to simulated data and illustarte the pile-up problem that may occur for maximum likelihood estimation and small sample size.'
+slug: []
+categories:
+#  - Macroeconometrics
+#  - Local Level Model
+#  - Kalman Filter
+tags:
+  - Macroeconometrics
+  - Local Level Model
+  - Kalman Filter
+links:
+- icon: twitter
+  icon_pack: fab
+  name: Follow
+  url: https://twitter.com/georgecushen
+slides: ""
+math: true
+description: Description for the page
+bibliography: [bibliography.bib]
+editor_options: 
+  chunk_output_type: console
+---
+
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  echo = FALSE, fig.height = 4, warning = FALSE, out.width = "100%"
+)
+library(tidyverse)
+library(lubridate)
+library(zoo)
+library(plotly)
+library(here)
+library(tidycensus)
+library(rvest)
+library(knitr)
+library(kableExtra)
+library(readxl)
+library(htmltools)
+library(MTS)
+```
+
+
+```{r}
+# Move this css tag outside the chunk to control the width of text
+# on the page.
+# <style type="text/css">
+# .main-container {
+#   max-width: 1000px;
+#   margin-left: auto;
+#   margin-right: auto;
+# }
+# </style>
+```
+
+# Framework
+
+In the exercise, I was provided with monthly export data of a Swiss industry. The aim was to forecast exports for several different regions, including Europe, the United States as well as total exports. In this short project description, I will focus on the procedure to forecast total exports of the Swiss industry.
+
+
+Below, the figure shows the original series of total exports of this Swiss industry. The series shows strong seasonality and a positive trend over time. The series starts in 1993 and total exports peak in october 2014 at 2.28 billion CHF.
+
+
+```{r, include = FALSE}
+
+# clear variables:
+rm(list=ls(all=TRUE))
+
+```
+
+test

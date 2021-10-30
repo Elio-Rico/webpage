@@ -43,7 +43,7 @@ superuser: true
 title: Elio Bolliger
 ---
 
-I am PhD Student in Economics at the [University of Lausanne](https://www.unil.ch/hec/en/home.html/). My research interests focus on information frictions, expectation formations and macroprudential regulation.
+I am PhD Candidate in Economics at the [University of Lausanne](https://www.unil.ch/hec/en/home.html/). My research interests focus on information frictions, expectation formations and macroprudential regulation.
 
 Besides that, I am a scientific collaborator at the [CREA Swiss Institute of Applied Economics](https://www.unil.ch/crea/fr/home.html). Finished and ongoing projects include quarterly forecasting of industry exports and the development of a News Sentiment Index with a novel database in Switzerland.
 
