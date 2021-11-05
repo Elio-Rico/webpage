@@ -11,7 +11,9 @@ headless: true
 # Order that this section appears on the page.
 weight: 80
 
-title: 'Working Papers'
+title: 'Ongoing Research'
+# note that the title before was 'Working Papers'
+
 subtitle: ''
 
 content:
@@ -23,9 +25,9 @@ content:
   filters:
     author: ""
     category: ""
-    publication_type: "3"
+    publication_type: "0"
     tag: ""
-  # Page order: descending (desc) or ascending (asc) date.
+  # Page order: descending (desc) or ascending (asc) date. NOTE THAT THE PUBLICATION TYPE WAS "3" BEFORE THE CAHNGE
   order: desc
 
 design:
