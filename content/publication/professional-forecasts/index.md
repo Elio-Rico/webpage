@@ -1,7 +1,7 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: "Analysis of Professional Forecasts"
+title: "Dissecting the Home bias in Survey Expectations"
 authors: 
 - Kenza Benhima
 - admin
@@ -23,7 +23,7 @@ publication_types:
 publication: ""
 publication_short: ""
 
-abstract: "In this paper, we use data from Consensus Economic to analyze professional forecasts. We characterize institution-country pairs by their location which allows us to study differences in Forecast Errors and Revisions conditional on the location of the institution."
+abstract: "One of the leading potential explanations of the home bias in asset holdings and of capital flow volatility is the asymmetry of information between local and foreign agents. We provide direct evidence of this asymmetry by looking at survey expectations. Using individual GDP growth and inflation forecasts by professional forecasters for a panel of emerging and advanced economies, we show that foreign forecasters make more mistakes than local forecasters. This finding is consistent across country and forecaster types and across sub-periods. This ``home bias'' in expectations is not due to a more irrational expectation formation by foreigners, but to local forecasters' more precise information. Besides, consistent with a standard noisy information model where foreigners and locals observe the same public signals but locals have more precise private signals, foreign forecasts react more to public signals than the local ones. On the methodological side, we provide tests that identify differences in information frictions across groups."
 
 # Summary. An optional shortened abstract.
 summary: "In this paper, we use data from Consensus Economic to analyze professional forecasts. We characterize institution-country pairs by their location which allows us to study differences in Forecast Errors and Revisions conditional on the location of the institution."
