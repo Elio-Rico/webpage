@@ -2,7 +2,7 @@
 # Documentation: https://wowchemy.com/docs/managing-content/
 
 title: "Local Level Model"
-summary: ""
+summary: "We discuss the local level model. First, we use simulated time series to apply the Kalman Filter. Then, we discuss the properties of the Maximum Likelihood Estimator (MLE) in a small Monte Carlo simulation exercise in estimating the signa-to-noise ratio. Within this framework, we will also analyze the pile-up problem of the MLE results."
 authors: 
 - admin
 tags: 
