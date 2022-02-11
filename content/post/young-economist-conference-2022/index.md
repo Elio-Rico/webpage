@@ -3,7 +3,7 @@
 
 title: "Young Swiss Economist Meeting 2022"
 subtitle: ""
-summary: "Participating at the YSEM 2022 with the paper "The Effects of Macroprudential Policies on Homeownership: Evidence from Switzerland" "
+summary: "Participating at the YSEM 2022 with the paper The Effects of Macroprudential Policies on Homeownership: Evidence from Switzerland "
 authors: 
 - admin
 tags:
