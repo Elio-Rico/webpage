@@ -9,8 +9,8 @@ authors:
 tags:
 - Conference
 categories: []
-date: 2022-02-11T08:44:03+01:00
-lastmod: 2022-02-11T08:44:03+01:00
+date: 2022-04-11T08:44:03+01:00
+lastmod: 2022-04-11T08:44:03+01:00
 featured: false
 draft: false
 
@@ -30,4 +30,4 @@ image:
 projects: []
 ---
 
-From April 21-22nd 2022, the "Theories and Methods in Macroeconomics Conference 2022"" takes place in London. Our paper "Dissecting the Home bias in Survey Expectations" has been selected. I am very much looking forward to the presentation, inputs and discussions at this conference.
+From April 21-22nd 2022, the ["Theories and Methods in Macroeconomics Conference 2022"](https://t2m2022.sciencesconf.org/) takes place in London. Our paper "Dissecting the Home bias in Survey Expectations" has been selected. I am very much looking forward to the presentation, inputs and discussions at this conference.
