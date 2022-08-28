@@ -1,7 +1,7 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: "News Sentiment Index for Switzerland"
+title: "Inflation Expectations and News Media: Regional Differences in Switzerland"
 authors:
 - admin
 
@@ -22,7 +22,7 @@ publication_types:
 publication: ""
 publication_short: ""
 
-abstract: "In this paper, we use a unique data base to generate a comprehensive News Sentiment Index for Switzerland. To our knowledge, we are the first to exploit this new data base which contains news article from 400 newspapers in Switzerland. This allows us to generate regional News Sentiment indices and analyze different topics. Dating back to 1911, the data contains more than 20 million articles."
+abstract: "This paper uses a novel dataset in Switzerland to study asymmetric effects of newspaper reporting with respect to inflation. Using a non-linear time series model, we document a media negativity bias in French written newspapers, but find no evidence for newspapers written in German. Furthermore, we find that media tone shocks effect inflation expectations more for households located in the French speaking part compared to the German speaking part of Switzerland, suggesting that the media bias in newspapers affects inflation expectations. Finally, we find that information about inflation decrease is more informative than information about an inflation increase."
 
 # Summary. An optional shortened abstract.
 summary: ""
