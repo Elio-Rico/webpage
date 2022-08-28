@@ -3,7 +3,7 @@
 
 title: "RCEA 2022"
 subtitle: ""
-summary: "Participating at the RCEA 2022 with the paper Dissecting the Home bias in Survey Expectations"
+summary: "Presenting at the RCEA 2022 with the paper Dissecting the Home bias in Survey Expectations"
 authors: 
 - admin
 tags:
