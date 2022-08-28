@@ -1,7 +1,7 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: "SSES 2022
+title: "SSES 2022""
 subtitle: ""
 summary: "Presented at the Swiss Society for Economics and Statistics Conference the paper Dissecting the Home bias in Survey Expectations"
 authors: 
