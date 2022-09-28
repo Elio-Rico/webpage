@@ -9,7 +9,7 @@ authors:
 tags:
 - Conference
 categories: []
-date: 2022-10-20T08:44:03+01:00
+date: 2022-09-27T08:44:03+01:00
 lastmod: 2022-09-27T08:44:03+01:00
 featured: false
 draft: false
@@ -30,4 +30,4 @@ image:
 projects: []
 ---
 
-Joint with the Swiss National Bank, the Study Center sponsors a biannual conference organized jointly with the Journal of Monetary Economics. At the postersession, I will present my work on "Inflation Expectations: Regional Differences in Switzerland".
+Joint with the Swiss National Bank, the Study Center sponsors a biannual conference organized jointly with the Journal of Monetary Economics in October 2022. At the postersession, I will present my work on "Inflation Expectations: Regional Differences in Switzerland".
