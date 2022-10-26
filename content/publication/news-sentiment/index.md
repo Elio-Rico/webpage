@@ -1,15 +1,15 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: "Inflation Expectations and News Media: Regional Differences in Switzerland"
+title: "Inflation Expectations, Perceptions and News Media: Regional Differences in Switzerland"
 authors:
 - admin
 
-date: 2021-07-20T17:21:07+02:00
+date: 2022-10-10T17:21:07+02:00
 doi: ""
 
 # Schedule page publish date (NOT publication's date).
-publishDate: 2021-07-20T17:21:07+02:00
+publishDate: 2022-10-10T17:21:07+02:00
 
 # Publication type.
 # Legend: 0 = Uncategorized; 1 = Conference paper; 2 = Journal article;
@@ -22,7 +22,7 @@ publication_types:
 publication: ""
 publication_short: ""
 
-abstract: "This paper uses a novel dataset in Switzerland to study asymmetric effects of newspaper reporting with respect to inflation. Using a non-linear time series model, we document a media negativity bias in French written newspapers, but find no evidence for newspapers written in German. Furthermore, we find that media tone shocks effect inflation expectations more for households located in the French speaking part compared to the German speaking part of Switzerland, suggesting that the media bias in newspapers affects inflation expectations. Finally, we find that information about inflation decrease is more informative than information about an inflation increase."
+abstract: "This paper studies newspaper inflation reporting and its effects on inflation expectations and perceptions in Switzerland. We create a standard quantitative inflation news measure and a novel qualitative measure of inflation sentiment for newspapers written in two national languages. We find that newspapers written in French report significantly more about an inflation increase compared to a decrease and German newspapers report more negatively about an inflation decrease. Using regional inflation expectations and perceptions from a national household survey, we exploit the language barrier in Switzerland to study the effects of inflation news reporting. We find that both the quantitative and the qualitative news measure affect perceptions and expectations. Additionally, we document socio-demographic differences in the response of expectations and perceptions to news."
 
 # Summary. An optional shortened abstract.
 summary: ""

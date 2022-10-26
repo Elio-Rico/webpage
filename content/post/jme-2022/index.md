@@ -3,7 +3,7 @@
   
 title: "JME 2022"
 subtitle: ""
-summary: 'Upcoming Poster Session presenting my single author Paper "Inflation Expectations and News Media: Regional Differences in Switzerland" at the Gerzensee Conference with the Journal of Monetary Economics'
+summary: 'Upcoming Poster Session presenting my single author paper "Inflation Expectations and News Media: Regional Differences in Switzerland" at the Gerzensee Conference with the Journal of Monetary Economics'
 authors: 
 - admin
 tags:
@@ -30,4 +30,4 @@ image:
 projects: []
 ---
 
-Joint with the Swiss National Bank, the Study Center sponsors a biannual conference organized jointly with the Journal of Monetary Economics in October 2022. At the postersession, I will present my work on "Inflation Expectations: Regional Differences in Switzerland".
+Joint with the Swiss National Bank, the Study Center sponsors a biannual conference organized jointly with the Journal of Monetary Economics in October 2022. At the Poster Session, I will present my work on "Inflation Expectations: Regional Differences in Switzerland".
