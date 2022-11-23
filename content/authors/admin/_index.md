@@ -54,5 +54,7 @@ From November 2022 to April 2023, I will be joining the Macro Financial Division
 
 {{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/CV_ElioBolliger.pdf" "newtab" >}}CV {{< /staticref >}}.
 
-{{< icon name="download" pack="fas" >}} {{< staticref "https://www.eliobolliger.com/publication/news-sentiment/news-sentiment.pdf" "newtab" >}}Job Market Paper  {{< /staticref >}}.
+[Job Market Paper](https://www.eliobolliger.com/publication/news-sentiment/news-sentiment.pdf)
+
+
 
