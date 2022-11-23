@@ -49,7 +49,7 @@ Besides that, I am a scientific collaborator at the [CREA Swiss Institute of App
 
 Before starting my PhD, I was an intern at the Financial Stability Division of the [Swiss National Bank](https://www.snb.ch/) where I returned to for a research collaboration as part of my PhD.
 
-From November 2022 to April 2023, I will be joining the Macro Financial Division at the Central Bank of Ireland for a research internship.
+From November 2022 to April 2023, I will be joining the Macro Financial Division at the [Central Bank of Ireland](https://www.centralbank.ie/)  for a research internship.
 
 
 {{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/CV_ElioBolliger.pdf" "newtab" >}}CV {{< /staticref >}}.
