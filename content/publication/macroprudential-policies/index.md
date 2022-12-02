@@ -1,8 +1,8 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-abstract: "This paper analyzes how the introduction of macroprudential policies on the Swiss residential mortgage market affected the propensity of households to become homeowners. We exploit a unique administrative data set of individual tax records containing detailed financial and socio-demographic information. We show that the mean share of renter households transitioning into homeownership decreased from 3.4% per year in the four years prior to the introduction  of macroprudential policies to 3.0% per year in the four years afterward. We also present evidence suggesting that this decrease is, at least partly, due to  a tightening in borrowing constraints. 
-Specifically, it is more pronounced for young and middle-aged households with relatively low income and wealth. Moreover, intergenerational transfers in the form of predeath bequests have become more important for homebuying both at the extensive and intensive margin. As family wealth is heterogeneous, the introduction of macroprudential policies may entail distributional consequences. "
+abstract: "This paper analyzes how the introduction of macroprudential policies in the Swiss residential mortgage market affected the propensity of households to become homeowners. We exploit a unique administrative data set of individual tax records containing detailed financial and socio-demographic information. We show that the mean share of renter households transitioning into homeownership decreased from 3.4% per year in the five years prior to the introduction  of macroprudential policies to 3.0% per year in the five years afterward. This decrease is more pronounced for young and middle-aged households with relatively low income and wealth, suggesting that it is at least partly due to  a tightening in borrowing constraints. 
+Moreover, intergenerational transfers in the form of predeath bequests have become more important for homebuying both at the extensive and intensive margin."
 
 
 title: "The Effect of Macroprudential Policies on Homeownership: Evidence from Switzerland"
