@@ -1,7 +1,7 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: "Dissecting the Home bias in Survey Expectations"
+title: "Dissecting the Home Bias in Survey Expectations"
 authors: 
 - Kenza Benhima
 - admin
