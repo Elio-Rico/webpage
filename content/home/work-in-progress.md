@@ -3,7 +3,7 @@
 # Documentation: https://wowchemy.com/docs/page-builder/
 widget: featured
 
-active: false
+active: true
 # note that this was ACTIVE BEFORE THE CHANGE ON YOUR PAGE FROM WORKING PAPER TO ONGOING RESEARCH
 
 # This file represents a page section.
