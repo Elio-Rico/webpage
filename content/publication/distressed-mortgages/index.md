@@ -1,9 +1,12 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: "Distressed Mortgages (Work in Progress)"
+title: "Distressed Mortgages: A Machine Learning Assessment (Work in Progress)"
 authors:
 - admin
+- Paul Lyons
+- Sameer Shaikh
+- Fang Yao
 
 date: 2018-02-10
 doi: ""
