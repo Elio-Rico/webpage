@@ -11,8 +11,9 @@ tags:
 categories: []
 date: 2022-02-11T08:44:03+01:00
 lastmod: 2022-02-11T08:44:03+01:00
-featured: true
+featured: false
 draft: false
+active: false
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.
