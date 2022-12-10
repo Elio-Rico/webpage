@@ -11,7 +11,7 @@ headless: true
 # Order that this section appears on the page.
 weight: 80
 
-title: 'Ongoing Research'
+title: 'Working Papers'
 # note that the title before was 'Working Papers'
 
 subtitle: ''
