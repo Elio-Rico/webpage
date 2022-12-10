@@ -1,16 +1,16 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: "Dissecting the Home Bias in Survey Expectations"
+title: "Do Local Forecasters Have Better Information?"
 authors: 
 - Kenza Benhima
 - admin
 
-date: 2021-09-20T17:21:07+02:00
+date: 2021-12-20T17:21:07+02:00
 doi: ""
 
 # Schedule page publish date (NOT publication's date).
-publishDate: 2021-09-20T17:21:07+02:00
+publishDate: 2021-12-20T17:21:07+02:00
 
 # Publication type.
 # Legend: 0 = Uncategorized; 1 = Conference paper; 2 = Journal article;
@@ -23,7 +23,7 @@ publication_types:
 publication: ""
 publication_short: ""
 
-abstract: "One of the leading potential explanations of the home bias in asset holdings and of capital flow volatility is the asymmetry of information between local and foreign agents. We provide direct evidence of this asymmetry by looking at survey expectations. Using individual GDP growth and inflation forecasts by professional forecasters for a panel of emerging and advanced economies, we show that foreign forecasters make more mistakes than local forecasters. This finding is consistent across country and forecaster types and across sub-periods. This ``home bias'' in expectations is not due to a more irrational expectation formation by foreigners, but to local forecasters' more precise information. Besides, consistent with a standard noisy information model where foreigners and locals observe the same public signals but locals have more precise private signals, foreign forecasts react more to public signals than the local ones. On the methodological side, we provide tests that identify differences in information frictions across groups."
+abstract: "Do local forecasters outperform foreign ones when forecasting macroeconomic fundamentals? If so, is this local advantage due to behavioral biases or to information asymmetries? In this paper, we provide direct evidence of both a better performance of local forecasters and of the informational origin of this local advantage by looking at survey expectations. Using individual GDP growth and inflation forecasts by professional forecasters for a panel of emerging and advanced economies, we show that foreign forecasters make more mistakes than local forecasters. The local forecasters' more accurate expectations is not due to a more irrational expectation formation by foreigners, but to local forecasters' more precise information. On the methodological side, we provide tests that identify differences in information frictions across groups."
 
 # Summary. An optional shortened abstract.
 summary: "In this paper, we use data from Consensus Economic to analyze professional forecasts. We characterize institution-country pairs by their location which allows us to study differences in Forecast Errors and Revisions conditional on the location of the institution."
