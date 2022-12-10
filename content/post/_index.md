@@ -5,5 +5,5 @@ header:
   image: ""
 title: Posts
 view: 2
-count: 3
+count: 2
 ---
