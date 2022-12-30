@@ -25,7 +25,8 @@ publication_types:
 publication: ""
 publication_short: ""
 
-abstract: ""
+abstract: "In this project, we investigate mortgages under distress. Using bank-level loan data from Ireland, we describe mortgage holders that are most likely to engage via a Standard Financial Statement (SFS) as part of the Mortgage Arrears Resolution Process (MARP). For this, we use state-of-the-art machine learning tools. Finally, we tune a machine learning model to predict the probability of distress for a given loan.
+
 
 # Summary. An optional shortened abstract.
 summary: ""
