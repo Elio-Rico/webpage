@@ -1,7 +1,7 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: "Mutual Funds Expectations and Portfolio Allocation (Work in Progress)"
+title: "Granular Expectation Shocks and Financial Contagion (Work in Progress)"
 authors:
 - Kenza Benhima
 - admin
