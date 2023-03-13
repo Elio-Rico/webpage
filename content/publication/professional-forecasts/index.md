@@ -23,7 +23,15 @@ publication_types:
 publication: ""
 publication_short: ""
 
-abstract: "Do local forecasters outperform foreign ones when forecasting macroeconomic fundamentals? If so, is this local advantage due to behavioral biases or to information asymmetries? In this paper, we provide direct evidence of both a better performance of local forecasters and of the informational origin of this local advantage by looking at survey expectations. Using individual GDP growth and inflation forecasts by professional forecasters for a panel of emerging and advanced economies, we show that foreign forecasters make more mistakes than local forecasters. The local forecasters' more accurate expectations is not due to a more irrational expectation formation by foreigners, but to local forecasters' more precise information. On the methodological side, we provide tests that identify differences in information frictions across groups."
+abstract: "Do local forecasters outperform foreign ones when forecasting macroeconomic fundamentals? If so, is this local advantage due to behavioral biases or to information asymmetries? In this paper, we provide direct evidence of both a better performance of local forecasters and of the informational origin of this local advantage by looking at survey expectations. Using individual GDP growth and inflation forecasts by professional forecasters for a panel of emerging and advanced economies, we show that foreign forecasters make more mistakes than local forecasters. The local forecasters' more accurate expectations is not due to a more irrational expectation formation by foreigners, but to local forecasters' more precise information. On the methodological side, we provide tests that identify differences in information frictions across groups. <br> <br> Presented at: 
+<br> - Young Swiss Economists Meeting: KOF & ETH Zurich, virtual (2022) 
+<br> - Theories and Methods in Macroeconomics, United Kingdom (2022) 
+<br> - Conference on Recent Developments in Economics, Econometrics and Finance, virtual (2022) 
+<br> - Econ GSW Webinar series for graduate students, virtual (2022) 
+<br> - SFI Research Days, Switzerland (2022) 
+<br> - Swiss Society of Economics and Statistics, Switzerland (2022) 
+<br> - Research Days, University of Lausanne, Switzerland (2021)
+"
 
 # Summary. An optional shortened abstract.
 summary: "In this paper, we use data from Consensus Economic to analyze professional forecasts. We characterize institution-country pairs by their location which allows us to study differences in Forecast Errors and Revisions conditional on the location of the institution."

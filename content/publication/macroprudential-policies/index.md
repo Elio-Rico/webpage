@@ -2,7 +2,7 @@
 # Documentation: https://wowchemy.com/docs/managing-content/
 
 abstract: "This paper analyzes how the introduction of macroprudential policies in the Swiss residential mortgage market affected the propensity of households to become homeowners. We exploit a unique administrative data set of individual tax records containing detailed financial and socio-demographic information. We show that the mean share of renter households transitioning into homeownership decreased from 3.4% per year in the five years prior to the introduction  of macroprudential policies to 3.0% per year in the five years afterward. This decrease is more pronounced for young and middle-aged households with relatively low income and wealth, suggesting that it is at least partly due to  a tightening in borrowing constraints. 
-Moreover, intergenerational transfers in the form of predeath bequests have become more important for homebuying both at the extensive and intensive margin."
+Moreover, intergenerational transfers in the form of predeath bequests have become more important for homebuying both at the extensive and intensive margin. <br> <br> Presented at:  <br> - Gerzensee Alumni Conference, Switzerland (2021) <br> - Research Days, University of Lausanne, Switzerland (2020) <br> - Swiss National Bank, Switzerland (2020)"
 
 
 title: "The Effect of Macroprudential Policies on Homeownership: Evidence from Switzerland"
