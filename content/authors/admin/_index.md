@@ -51,6 +51,8 @@ Before starting my PhD, I was an intern at the Financial Stability Division of t
 
 From November 2022 to April 2023, I join the Macro Financial Division at the [Central Bank of Ireland](https://www.centralbank.ie/)  for a research internship.
 
+I am happy to announce that I will join the Swiss Federal Finance Administration in Mai 2023 as Head of the Public Finance Analysis and Forecasting team in Financial Statistics.
+
 
 {{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/CV_ElioBolliger.pdf" "newtab" >}}CV {{< /staticref >}}.
 
