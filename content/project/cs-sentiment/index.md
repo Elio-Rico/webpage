@@ -2,7 +2,7 @@
 # Documentation: https://wowchemy.com/docs/managing-content/
 
 title: "Credit Suisse Twitter Sentiment"
-summary: "test"
+summary: "Credit Suisse Twitter Sentiment Analysis"
 authors: 
 - admin
 tags: 
@@ -14,7 +14,7 @@ categories: []
 date: 2022-02-10T15:52:04+01:00
 
 # Optional external URL for project (replaces project detail page).
-external_link: "https://github.com/Elio-Rico/cs-sentiment/"
+external_link: "https://elio-rico.github.io/cs-sentiment/"
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.
