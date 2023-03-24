@@ -7,7 +7,8 @@ summary: 'In a short project, I conducted a sentiment analysis on tweets on Twit
 authors: 
 - admin
 tags:
-- Conference
+- Natural Language Processing
+- Credit Suisse
 categories: []
 date: 2023-03-22T08:44:03+01:00
 lastmod: 2023-03-22T08:44:03+01:00
@@ -30,4 +31,4 @@ image:
 projects: []
 ---
 
-You can find the blog on the following page: https://elio-rico.github.io/cs-sentiment/.
+You can find the results on the following page: https://elio-rico.github.io/cs-sentiment/.
