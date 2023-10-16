@@ -52,7 +52,7 @@ From November 2022 to April 2023, I joined the Macro Financial Division at the [
 
 {{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/CV_ElioBolliger.pdf" "newtab" >}}CV {{< /staticref >}}.
 
-<em>Disclaimer: The views expressed in all work on this website are those of the authors and are not necessarily reflective of views at any institution I am or previously was affiliated with.</em>"
+<em>Disclaimer: The views expressed in all work on this website are those of the authors and are not necessarily reflective of views at any institution I am or previously was affiliated with.</em>
 
 
 
