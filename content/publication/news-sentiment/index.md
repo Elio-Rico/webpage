@@ -23,7 +23,7 @@ publication: ""
 publication_short: ""
 
 abstract: "This paper studies newspaper inflation reporting and its effects on inflation expectations and perceptions in Switzerland. We create a standard quantitative inflation news measure and a novel qualitative measure of inflation sentiment for newspapers written in two national languages. We find that newspapers written in French report significantly more about an inflation increase compared to a decrease and German newspapers report more negatively about an inflation decrease. Using regional inflation expectations and perceptions from a national household survey, we exploit the language barrier in Switzerland to study the effects of inflation news reporting. We find that both the quantitative and the qualitative news measure affect perceptions and expectations. Additionally, we document socio-demographic differences in the response of expectations and perceptions to news. <br> <br> Presented at: 
-<br> - Deutsche Bundesbank, Brown Bag Seminar (scheduled in June), Germany (2023) 
+<br> - Annual Congress of the Swiss Society of Economics and Statistics, Switzerland (2023) 
 <br> - Economics Research Seminar, Central Bank of Ireland, Ireland (2023) 
 <br> - Journal of Monetary Economics: Young Economist Poster Session, Switzerland (2022) 
 <br> - Research Days, University of Lausanne, Switzerland (2022) 
@@ -40,11 +40,11 @@ featured: true
 
 # Custom links (optional).
 #   Uncomment and edit lines below to show custom links.
-# links:
-# - name: Follow
-#   url: https://twitter.com
-#   icon_pack: fab
-#   icon: twitter
+links:
+- name: Follow
+  url: https://twitter.com
+  icon_pack: fab
+  icon: twitter
 
 url_pdf:
 url_code:
