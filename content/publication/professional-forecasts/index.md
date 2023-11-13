@@ -34,7 +34,7 @@ abstract: "Do local forecasters outperform foreign ones when forecasting macroec
 "
 
 # Summary. An optional shortened abstract.
-summary: "In this paper, we use data from Consensus Economic to analyze professional forecasts. We characterize institution-country pairs by their location which allows us to study differences in Forecast Errors and Revisions conditional on the location of the institution."
+summary: "R&R, The Review of Economics and Statistics"
 
 tags: []
 categories: []
