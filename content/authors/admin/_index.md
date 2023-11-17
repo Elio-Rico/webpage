@@ -41,7 +41,7 @@ superuser: true
 title: Elio Bolliger
 ---
 
-I am an Economist at the [Swiss Federal Department of Financ](https://www.efd.admin.ch/efd/en/home.html) in Financial Statistics. My research interests focus on information frictions, expectation formations and macroprudential regulation.
+I am an Economist at the [Swiss Federal Department of Finance](https://www.efd.admin.ch/efd/en/home.html) in Financial Statistics. My research interests focus on information frictions, expectation formations and macroprudential regulation.
 
 I finished my PhD at the [University of Lausanne, HEC](https://www.unil.ch/hec/en/home.html), in September 2023. During my PhD, I was a scientific collaborator at the [CREA Swiss Institute of Applied Economics](https://www.unil.ch/crea/fr/home.html). Finished projects include quarterly forecasting of industry exports and the development of a News Sentiment Index with a novel database in Switzerland.
 
