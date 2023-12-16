@@ -1,7 +1,7 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: "Granular Expectation Shocks and Financial Contagion (Work in Progress)"
+title: "Granular Expectation Shocks and Financial Contagion"
 authors:
 - Kenza Benhima
 - admin
