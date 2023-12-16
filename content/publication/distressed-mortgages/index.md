@@ -1,7 +1,7 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: "Distressed Mortgages: A Machine Learning Assessment (Work in Progress)"
+title: "Distressed Mortgages: A Machine Learning Assessment "
 authors:
 - admin
 - Paul Lyons
