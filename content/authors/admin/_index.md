@@ -50,7 +50,7 @@ Before starting my PhD, I was an intern at the Financial Stability Division of t
 From November 2022 to April 2023, I joined the Macro Financial Division at the [Central Bank of Ireland](https://www.centralbank.ie/)  for a research internship.
 
 
-{{< icon name="download" pack="fas" >}} {{< staticref "uploads/CV_ElioBolliger.pdf" "newtab" >}}CV {{< /staticref >}}.
+Please find my {{< icon name="download" pack="fas" >}} {{< staticref "uploads/CV_ElioBolliger.pdf" "newtab" >}}CV here {{< /staticref >}}
 
 <em>Disclaimer: The views expressed in all work on this website are those of the authors and are not necessarily reflective of views at any institution I am or previously was affiliated with.</em>
 
