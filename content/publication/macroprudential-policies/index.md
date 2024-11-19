@@ -33,7 +33,7 @@ publication_short: ""
 
 
 # Summary. An optional shortened abstract.
-summary: "R&R, Journal of Urban Economics"
+summary: "Conditionally accepted, Journal of Urban Economics"
 
 tags: []
 categories: []
