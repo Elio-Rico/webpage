@@ -9,8 +9,8 @@ authors:
 tags:
 - Conference
 categories: []
-date: 2022-09-27T08:44:03+01:00
-lastmod: 2022-09-27T08:44:03+01:00
+date: 2025-01-01T08:44:03+01:00
+lastmod: 2025-01-01T08:44:03+01:00
 featured: false
 draft: false
 
