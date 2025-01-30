@@ -1,9 +1,9 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
   
-title: "JME 2022"
+title: "Research News"
 subtitle: ""
-summary: 'Upcoming Poster Session presenting my single author paper "Inflation Expectations and News Media: Regional Differences in Switzerland" at the Gerzensee Conference with the Journal of Monetary Economics'
+summary: 'Accepted publication at JUE and conditional acceptance Review of Economics and Statistics'
 authors: 
 - admin
 tags:
@@ -30,4 +30,4 @@ image:
 projects: []
 ---
 
-Joint with the Swiss National Bank, the Study Center sponsors a biannual conference organized jointly with the Journal of Monetary Economics in October 2022. At the Poster Session, I will present my work on "Inflation Expectations: Regional Differences in Switzerland".
+I am delighted to see the paper "The Effect of Macroprudential Policies on Homeownership: Evidence from Switzerland" accepted at JUE and the paper "Do Local Forecasters Have Better Information?" conditionally accepted at The Review of Economics and Statistics. Updated versions of the paper on this webpage coming soon!
