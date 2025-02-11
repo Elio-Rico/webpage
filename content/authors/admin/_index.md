@@ -20,7 +20,7 @@ interests:
 organizations:
 - name: Swiss Federal Department of Finance
   url: https://www.efd.admin.ch/efd/en/home.html
-role: Head of Federal Finances Analysis and Forecasting Team in Financial Statistics
+role: Head of Federal Finances Analysis and Forecasting Team in Financial Statistics <br> Deputy Head of Financial Statistics Division
 social:
 - icon: envelope
   icon_pack: fas
