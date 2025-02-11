@@ -9,9 +9,9 @@ active: true
 headless: true
 
 # Order that this section appears on the page.
-weight: 92
+weight: 91
 
-title: 'Working Papers'
+title: 'Publications'
 # note that the title before was 'Working Papers'
 
 subtitle: ''

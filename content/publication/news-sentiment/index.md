@@ -16,7 +16,7 @@ publishDate: 2022-10-10T17:21:07+02:00
 # 3 = Preprint / Working Paper; 4 = Report; 5 = Book; 6 = Book section;
 # 7 = Thesis; 8 = Patent
 publication_types: 
-- "0"
+- "1"
 
 # Publication name and optional abbreviated publication name. 
 publication: ""

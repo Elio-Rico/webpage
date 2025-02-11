@@ -33,7 +33,7 @@ publication_short: ""
 
 
 # Summary. An optional shortened abstract.
-summary: "Conditionally accepted, Journal of Urban Economics"
+summary: "Journal of Urban Economics, 2025"
 
 tags: []
 categories: []
@@ -47,13 +47,13 @@ featured: true
 #   icon_pack: fab
 #   icon: twitter
 
-url_pdf:
-url_code:
+url_pdf: "https://www.sciencedirect.com/science/article/pii/S0094119025000142"
+url_code: ""
 url_dataset:
 url_poster:
 url_project:
 url_slides:
-url_source:
+url_source: 
 url_video:
 
 # Featured image
