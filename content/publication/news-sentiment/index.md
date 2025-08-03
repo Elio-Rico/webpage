@@ -30,7 +30,7 @@ abstract: "This paper studies newspaper inflation reporting and its effects on i
 "
 
 # Summary. An optional shortened abstract.
-summary: ""
+summary: "Submitted"
 
 
 
