@@ -17,7 +17,7 @@ publishDate: 2021-12-20T17:21:07+02:00
 # 3 = Preprint / Working Paper; 4 = Report; 5 = Book; 6 = Book section;
 # 7 = Thesis; 8 = Patent
 publication_types: 
-- "1"
+- "0"
 
 # Publication name and optional abbreviated publication name.
 publication: ""
@@ -34,7 +34,7 @@ abstract: "Do local forecasters outperform foreign ones when forecasting macroec
 "
 
 # Summary. An optional shortened abstract.
-summary: "Conditionally accepted, Review of Economics and Statistics"
+summary: "Forthcoming, Review of Economics and Statistics"
 
 tags: []
 categories: []
