@@ -34,7 +34,7 @@ abstract: "Do local forecasters outperform foreign ones when forecasting macroec
 "
 
 # Summary. An optional shortened abstract.
-summary: "Forthcoming, Review of Economics and Statistics"
+summary: "Review of Economics and Statistics, 2025"
 
 tags: []
 categories: []
