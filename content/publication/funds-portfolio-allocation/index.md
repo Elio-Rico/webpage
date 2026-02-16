@@ -1,7 +1,7 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: "Granular Expectation Shocks and Financial Contagion"
+title: "Granular Portfolios, Expectations, and International Capital Flows"
 authors:
 - Kenza Benhima
 - admin
@@ -28,7 +28,7 @@ abstract: ""
 
 
 # Summary. An optional shortened abstract.
-summary: ""
+summary: "Submitted"
 
 
 tags: []
