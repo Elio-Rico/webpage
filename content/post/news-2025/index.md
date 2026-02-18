@@ -3,7 +3,7 @@
   
 title: "Research News"
 subtitle: ""
-summary: 'Accepted publication at JUE and conditional acceptance Review of Economics and Statistics'
+summary: 'Updated paper Granular Portfolios, Expectations, and International Capital Flows'
 authors: 
 - admin
 tags:
@@ -30,4 +30,4 @@ image:
 projects: []
 ---
 
-I am delighted to see the paper "The Effect of Macroprudential Policies on Homeownership: Evidence from Switzerland" accepted at JUE and the paper "Do Local Forecasters Have Better Information?" conditionally accepted at The Review of Economics and Statistics. Updated versions of the paper on this webpage coming soon!
+Major update available for the paper "Granular Portfolios, Expectations, and International Capital Flows" - the paper describes a novel channel of international financial contagion driven by investor expectations.
