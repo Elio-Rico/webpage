@@ -15,6 +15,14 @@
 [context.branch-deploy]
   command = "hugo --gc --minify -b $DEPLOY_PRIME_URL"
 
+# Macro & Fiscal Monitor: served from the macro-dashboard repo on GitHub Pages, shown
+# under this domain. Status 200 = proxy (rewrite), so the URL stays eliobolliger.com/dashboard/.
+[[redirects]]
+  from = "/dashboard/*"
+  to = "https://elio-rico.github.io/macro-dashboard/:splat"
+  status = 200
+  force = true
+
 [[plugins]]
   package = "netlify-plugin-hugo-cache-resources"
   [plugins.inputs]
